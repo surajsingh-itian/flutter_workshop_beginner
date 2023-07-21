@@ -1,0 +1,7 @@
+{
+  "helloWorld": "नमस्ते दुनिया!",
+  "login": "लाॅगिन",
+  "username": "युजरनेम",
+  "password": "पासवर्ड",
+  "required": "{field} अनिवार्य हैं"
+}

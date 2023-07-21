@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import './home/home.dart';
-import './login/login.dart';
-import './main/main.dart';
+import './pages/home/home.dart';
+import './pages/login/login.dart';
+import './pages/main/main.dart';
 
 class WorkshopRoutes {
   static const home = '/home';

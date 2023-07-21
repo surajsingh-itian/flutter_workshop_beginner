@@ -1,0 +1,28 @@
+{
+  "helloWorld": "Hello World!",
+  "@helloWorld": {
+    "description": "The conventional newborn programmer greeting"
+  },
+  "login": "Login",
+  "@login": {
+    "description": "Login button text in the Login page."
+  },
+  "username": "Username",
+  "@username": {
+    "description": "Username text in the Login page."
+  },
+  "password": "Password",
+  "@password": {
+    "description": "Username text in the Login page."
+  },
+  "required": "{field} is required",
+  "@required": {
+    "description": "A required message for the field on the Login Page",
+    "placeholders": {
+      "field": {
+        "type": "String",
+        "example": "Username"
+      }
+    }
+  }
+}

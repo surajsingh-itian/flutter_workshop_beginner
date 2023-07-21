@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_web_plugins/url_strategy.dart';
 
 import 'routes.dart';
@@ -16,6 +17,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Workshop Flutter',
+      initialRoute: WorkshopRoutes.main,
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -28,9 +31,8 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      initialRoute: WorkshopRoutes.main,
       routes: WorkshopRoutes.getRoutes(context),
-      // home: const HomePage(title: 'Workshop Home Page'),
+      supportedLocales: AppLocalizations.supportedLocales,
     );
   }
 }

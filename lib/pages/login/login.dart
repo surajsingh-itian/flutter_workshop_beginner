@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -14,7 +15,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Login')),
+      appBar: AppBar(title: Text(AppLocalizations.of(context)!.login)),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(16.0),
@@ -25,29 +26,31 @@ class _LoginPageState extends State<LoginPage> {
               children: [
                 TextFormField(
                   autofocus: true,
-                  decoration: const InputDecoration(
-                    border: OutlineInputBorder(),
-                    hintText: 'Username',
+                  decoration: InputDecoration(
+                    border: const OutlineInputBorder(),
+                    hintText: AppLocalizations.of(context)!.username,
                   ),
                   onSaved: (newValue) => data['username'] = newValue ?? '',
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return 'Username is required';
+                      return AppLocalizations.of(context)!
+                          .required(AppLocalizations.of(context)!.username);
                     }
                     return null;
                   },
                 ),
                 const SizedBox(height: 16.0),
                 TextFormField(
-                  decoration: const InputDecoration(
-                    border: OutlineInputBorder(),
-                    hintText: 'Password',
+                  decoration: InputDecoration(
+                    border: const OutlineInputBorder(),
+                    hintText: AppLocalizations.of(context)!.password,
                   ),
                   obscureText: true,
                   onSaved: (newValue) => data['password'] = newValue ?? '',
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return 'Password is required';
+                      return AppLocalizations.of(context)!
+                          .required(AppLocalizations.of(context)!.password);
                     }
                     return null;
                   },
@@ -65,7 +68,7 @@ class _LoginPageState extends State<LoginPage> {
                       );
                     }
                   },
-                  child: const Text('Login'),
+                  child: Text(AppLocalizations.of(context)!.login),
                 )
               ],
             ),

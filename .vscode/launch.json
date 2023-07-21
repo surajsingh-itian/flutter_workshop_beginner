@@ -5,18 +5,18 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "flutter_workshop",
+            "name": "Workshop Dev",
             "request": "launch",
             "type": "dart"
         },
         {
-            "name": "flutter_workshop (profile mode)",
+            "name": "Workshop (Profile mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "profile"
         },
         {
-            "name": "flutter_workshop (release mode)",
+            "name": "Workshop (release mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "release"
